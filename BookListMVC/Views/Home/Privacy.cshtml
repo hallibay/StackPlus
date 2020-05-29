@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" charset="utf-8"></script>
+<script src="~/js/quiz.js"></script>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<div id="quiz"></div>
+
+<script>
+    document.getElementById('quiz')
+</script>
+<style>
+    .quiz {
+        display: block;
+        background: linear-gradient(to bottom, #2a86d6 0%,#7db9e8 100%);
+        padding: 40px;
+        color: #ffffff;
+    }
+
+        .quiz button {
+            display: block;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .quiz .correct {
+            background-color: #ffffff;
+            padding: 5px;
+            color: #11AF08;
+            font-weight: bold;
+        }
+
+        .quiz .incorrect {
+            background-color: #ffffff;
+            padding: 5px;
+            color: #FF0C0C;
+            font-weight: bold;
+        }
+</style>
+
