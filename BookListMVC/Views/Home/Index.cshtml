@@ -6,7 +6,7 @@
         <h1 class="display-4">Welcome</h1>
         <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
-        <div id="root"></div>
+        <div id="root" style="background-color:whitesmoke"></div>
         <div class="root"></div>
         <h2>Add React in One Minute</h2>
         <p>This page demonstrates using React with no build tooling.</p>
@@ -29,17 +29,24 @@
             <!-- We will put our React component inside this div. -->
             <div class="like_button_container" data-commentid="3"></div>
         </p>
-        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-        <script type="text/babel">
+        @*<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>*@
+        @*<script type="text/babel">
             //  JSX Babel code goes here
 
             ReactDOM.render(
             <h1>Hello React!</h1>,
             document.getElementById('id01'));
-        </script>
-        <script src="~/js/like_button.js"></script>
-        <script src="~/js/MyInfo.js"></script>
-        @*<script src="~/js/FormName.js"></script>*@
+        </script>*@
+        
+        @*<script src="~/js/like_button.js"></script>*@
+        @*<script type="text/babel" src="~/js/Contactcard.js"></script>*@
+        @*<script type="text/babel" src="~/js/index.js"></script>*@
+
+            @*<script type="text/babel" src="~/js/ToDo.js"></script>*@
+            @*<script src="~/js/BookStore.js"></script>*@
+            @*<script src="~/js/MyInfo.js"></script>*@
+            @*<script src="~/js/FormName.js"></script>*@
+            <script type="text/babel" src="~/js/bundle.js"></script>
     </div>
 

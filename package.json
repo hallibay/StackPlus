@@ -1,0 +1,34 @@
+{
+  "name": "booklistmvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hallibay/StackPlus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hallibay/StackPlus/issues"
+  },
+  "homepage": "https://github.com/hallibay/StackPlus#readme",
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^10.0.0",
+    "gulp": "^4.0.2",
+    "gulp-browserify": "^0.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reactify": "^1.1.1",
+    "uniq": "^1.0.1"
+  }
+}

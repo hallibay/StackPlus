@@ -5,21 +5,11 @@
 
     }
 
-//     <div>
-////            <h1>God's kenny</h1>
-////            <p>This is a paragraph about me....</p>
-////            <ul>
-////                <li>Canada</li>
-////                <li>UK</li>
-////                <li>US</li>
-////            </ul>
-////        </div>
-   
 
     render() {
         return (
             React.createElement('div', null, ``,
-                React.createElement('h1', {}, 'God_s kenny'),
+                React.createElement('h1', { style: { color: "red",background:"purple" }, id: 'someId', className: "navbar" }, 'God_s kenny'),
                 React.createElement('p', {}, 'This is a paragraph about me....'),
                 React.createElement('li', { id: 'li1' }, 'Canada'),
                 React.createElement('li', { id: 'li1' }, 'UK'),
@@ -33,3 +23,4 @@ ReactDOM.render(
     React.createElement(MyData, null),
     document.getElementById('root')
 );
+
