@@ -25,28 +25,38 @@ function BusinessCard() {
     return (
         <div style={mystyle}>
             <Chat
-                name="Mr Manager"
-                imgUrl="/image/1.jpeg"
-                phone="(212) 555-6734977"
-                email="mr.manager@gmail.com"
+                contact={{
+                    name:"Mr Manager",
+                    imgUrl:"/image/1.jpeg",
+                    phone:"(212) 555-6734977",
+                    email:"mr.manager@gmail.com"
+                }}
+                
             />
             <Chat
-                name="Mr Console"
-                imgUrl="/image/2.jpeg"
-                phone="(212) 555-6734977"
-                email="mr.Console@gmail.com"
+                contact={{
+                    name:"Mr Console",
+                    imgUrl:"/image/2.jpeg",
+                    phone:"(212) 555-6734977",
+                    email:"mr.Console@gmail.com"
+                }}
             />
             <Chat
-                name="Mr Explorer"
-                imgUrl="/image/3.jpeg"
-                phone="(212) 555-6734977"
-                email="mr.Explorer@gmail.com"
+                contact={{
+                    name:"Mr Explorer",
+                    imgUrl:"/image/3.jpeg",
+                    phone:"(212) 555-6734977",
+                    email:"mr.Explorer@gmail.com"
+                }}
+                
             />
             <Chat
-                name="Mr Package"
-                imgUrl="/image/4.jpeg"
-                phone="(212) 555-6734977"
-                email="mr.Package@gmail.com"
+                contact={{
+                    name:"Mr Package",
+                    imgUrl:"/image/4.jpeg",
+                    phone:"(212) 555-6734977",
+                    email:"mr.Package@gmail.com"
+                }}
             />
 
 

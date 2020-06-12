@@ -22,6 +22,11 @@ namespace BookListMVC.Controllers
         {
             return View();
         }
+
+        public IActionResult Joke()
+        {
+            return View();
+        }
         public IActionResult Upsert(int? id)
         {
             Book = new Book();
