@@ -23,10 +23,10 @@ function Chat(props) {
     return (
         <div style={mystyle}>
             <div style={todoitem}>
-                <img src='/image/1.jpeg' height="150px" width="150px" />
-                <h3>Mr Package</h3>
-                <p>Phone: (212) 555-6735475</p>
-                <p>Email: Mr.package@yahoo.com </p>
+                <img src={props.imgUrl} height="150px" width="150px" />
+                <h3>{props.name}</h3>
+                <p>Phone: {props.phone}</p>
+                <p>Email: {props.email} </p>
             </div>
 
         </div>

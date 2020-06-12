@@ -273,10 +273,10 @@ function Chat(props) {
     return (
         React.createElement("div", {style: mystyle}, 
             React.createElement("div", {style: todoitem}, 
-                React.createElement("img", {src: "/image/1.jpeg", height: "150px", width: "150px"}), 
-                React.createElement("h3", null, "Mr Package"), 
-                React.createElement("p", null, "Phone: (212) 555-6735475"), 
-                React.createElement("p", null, "Email: Mr.package@yahoo.com ")
+                React.createElement("img", {src: props.imgUrl, height: "150px", width: "150px"}), 
+                React.createElement("h3", null, props.name), 
+                React.createElement("p", null, "Phone: ", props.phone), 
+                React.createElement("p", null, "Email: ", props.email, " ")
             )
 
         )
