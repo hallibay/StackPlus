@@ -191,26 +191,37 @@ function Joke(props) {
 
     return (
         React.createElement("div", null, 
-            React.createElement("h1", null, "Hi")
-
+            React.createElement("h3", {style: { display: !props.question && "none"}}, "Question: ", props.question, " "), 
+            React.createElement("h3", {style: { color: !props.question && "#888888"}}, "Answer: ", props.punchLine, " "), 
+            React.createElement("hr", null)
         )
     );
 }
 
 module.exports = Joke;
-},{"react":9}],3:[function(require,module,exports){
+},{"react":10}],3:[function(require,module,exports){
 var React = require('react');
 var Joke = require('./Joke.js');
+var JokesData = require('./jokesData.js');
 
 function JokeIndex(props) {
+    const jokeComponents = JokesData.map(joke => React.createElement(Joke, {key: joke.id, question: joke.question, punchLine: joke.punchLine}))
 
+    const mystyle = {
+        backgroundColor: "white",
+        margin: "auto",
+        width: "50%",
+        display: "flex",
+        flexDirection: "column",
+        alignitems: "center",
+        border: "1px solid #efefef",
+        boxshadow:
+            "0 1px 1px rgba(0, 0, 0, 15), 0 10px 0 -5px #eee,0 10px 1px - 4px rgba(0,0,0,0.15),0 20px 0 -10px #eee,0 20px 1px - 9px rgba(0,0,0,0.15)",
+        padding: "30px"
+    };
     return (
-        React.createElement("div", null, 
-            React.createElement(Joke, null), 
-            React.createElement(Joke, null), 
-            React.createElement(Joke, null), 
-            React.createElement(Joke, null), 
-            React.createElement(Joke, null)
+        React.createElement("div", {style: mystyle}, 
+            jokeComponents
         )
     );
 }
@@ -219,7 +230,41 @@ ReactDOM.render(
     React.createElement(JokeIndex, null),
     document.getElementById('root')
 );
-},{"./Joke.js":2,"react":9}],4:[function(require,module,exports){
+},{"./Joke.js":2,"./jokesData.js":4,"react":10}],4:[function(require,module,exports){
+const jokesData = [
+    {
+        id: 1,
+        punchLine: "It is hard to explain pun to kleptomanics because they always take things literally."
+    },
+    {
+        id: 2,
+        question:"What is the best thing about Nigeria?",
+        punchLine:"A country with great diversity and different cultures!"
+    },
+    {
+        id: 3,
+        question:"Did you hear about the mathematician who is afraid of negative numbers?",
+        punchLine:"He'll stop at nothing to avoid them!"
+    },
+    {
+        id: 4,
+        question:"Haer about the resturant called karma?",
+        punchLine:"yea, There's no menu: you get what you deserve"
+    },
+    {
+        id: 5,
+        question:"Did you hear about the actor who fall through the floorboards?",
+        punchLine:"He was going through a stage."
+    },
+    {
+        id: 6,
+        question:"Did you hear about the claustrophobic astronaut",
+        punchLine:"He just needed a little space."
+    }
+]
+module.exports = jokesData;
+
+},{}],5:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -311,7 +356,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -417,7 +462,7 @@ checkPropTypes.resetWarningCache = function() {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":6,"_process":1}],6:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":7,"_process":1}],7:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -431,7 +476,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 (function (process){
 /** @license React v16.13.1
  * react.development.js
@@ -2347,7 +2392,7 @@ exports.version = ReactVersion;
 }
 
 }).call(this,require('_process'))
-},{"_process":1,"object-assign":4,"prop-types/checkPropTypes":5}],8:[function(require,module,exports){
+},{"_process":1,"object-assign":5,"prop-types/checkPropTypes":6}],9:[function(require,module,exports){
 /** @license React v16.13.1
  * react.production.min.js
  *
@@ -2374,7 +2419,7 @@ key:d,ref:g,props:e,_owner:k}};exports.createContext=function(a,b){void 0===b&&(
 exports.lazy=function(a){return{$$typeof:A,_ctor:a,_status:-1,_result:null}};exports.memo=function(a,b){return{$$typeof:z,type:a,compare:void 0===b?null:b}};exports.useCallback=function(a,b){return Z().useCallback(a,b)};exports.useContext=function(a,b){return Z().useContext(a,b)};exports.useDebugValue=function(){};exports.useEffect=function(a,b){return Z().useEffect(a,b)};exports.useImperativeHandle=function(a,b,c){return Z().useImperativeHandle(a,b,c)};
 exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.useMemo=function(a,b){return Z().useMemo(a,b)};exports.useReducer=function(a,b,c){return Z().useReducer(a,b,c)};exports.useRef=function(a){return Z().useRef(a)};exports.useState=function(a){return Z().useState(a)};exports.version="16.13.1";
 
-},{"object-assign":4}],9:[function(require,module,exports){
+},{"object-assign":5}],10:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2385,4 +2430,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react.development.js":7,"./cjs/react.production.min.js":8,"_process":1}]},{},[3]);
+},{"./cjs/react.development.js":8,"./cjs/react.production.min.js":9,"_process":1}]},{},[3]);
